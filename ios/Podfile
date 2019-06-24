@@ -2,7 +2,12 @@ platform :ios, '10.0'
 inhibit_all_warnings!
 
 target 'rnappcenter' do
+  pod 'AppCenter/Crashes', '~> 2.0.1'
+  pod 'AppCenter/Analytics', '~> 2.0.1'
+  pod 'AppCenterReactNativeShared', '~> 2.0.0'
 
+  # Pods for AppCenter
+  
   use_frameworks!
   
   pod 'React', :path => '../node_modules/react-native', :subspecs => [
@@ -26,4 +31,5 @@ target 'rnappcenter' do
   pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+  platform :ios, '9.0'
 end
