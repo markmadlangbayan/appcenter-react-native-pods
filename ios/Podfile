@@ -3,7 +3,12 @@ inhibit_all_warnings!
 
 target 'rnappcenter' do
 
-  use_frameworks!
+  pod 'appcenter', path: '../node_modules/appcenter/ios'
+  pod 'appcenter-analytics', path: '../node_modules/appcenter-analytics/ios'
+  pod 'appcenter-crashes', path: '../node_modules/appcenter-crashes/ios'
+
+  #use_frameworks!
+  #[!] The 'Pods-rnappcenter' target has transitive dependencies that include static binaries: (/Users/markmadlangbayan/Documents/tutorials/rnappcenter-rn-manual/ios/Pods/AppCenter/AppCenter-SDK-Apple/iOS/AppCenterAnalytics.framework, /Users/markmadlangbayan/Documents/tutorials/rnappcenter-rn-manual/ios/Pods/AppCenter/AppCenter-SDK-Apple/iOS/AppCenter.framework, /Users/markmadlangbayan/Documents/tutorials/rnappcenter-rn-manual/ios/Pods/AppCenter/AppCenter-SDK-Apple/iOS/AppCenterCrashes.framework, and /Users/markmadlangbayan/Documents/tutorials/rnappcenter-rn-manual/ios/Pods/AppCenterReactNativeShared/AppCenterReactNativeShared/AppCenterReactNativeShared.framework)
   
   pod 'React', :path => '../node_modules/react-native', :subspecs => [
       'Core',
